@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Services = () => {
     return (
-        <div className="mt-20  w-full ">
+        <div className="mt-36  w-full m ">
 
             <div className="z-10 relative">
                 <div
@@ -11,9 +11,9 @@ const Services = () => {
 
                     className="absolute inset-0 top-[-80px]  lg:left-[450px] left-4 z-0">
                     <h1
-                        className="lg:text-[150px] text-[80px]  font-bold text-gray-300
+                        className="lg:text-[150px] text-[80px]  font-bold text-green-900/30
                         
-                        opacity-50 w-fit h-fit bg-clip-text text-transparent
+                        opacity-50 w-fit h-fit bg-clip-text 
 ">
                         Services
                     </h1>
@@ -34,7 +34,7 @@ const Services = () => {
                             <Image
                                 src="https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/service-1.jpg"
                                 alt="service"
-                                layout="responsive"
+                              
                                 width={1000} 
                                 height={500} 
                             />

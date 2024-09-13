@@ -78,7 +78,7 @@ const Header = () => {
                             <li>Contact</li>
                         </ul>
 
-                        <button className="bg-primary px-14 py-3
+                        <button className="bg-primaryown px-14 py-3
                          font-medium rounded-full 
                          text-white
                             hover:scale-90
