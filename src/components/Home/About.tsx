@@ -5,7 +5,7 @@ import { PhoneCall } from "lucide-react";
 const About = () => {
     return (
         <div>
-            <div className="lg:grid grid-cols-2 gap-10 mt-20 ">
+            <div className="grid lg:grid-cols-2 grid-cols-1   lg:gap-10 mt-20 md:mt-52 ">
                 <div className="grid grid-cols-2 lg:gap-5 relative lg:p-10 p-5 z-20" >
                     <div className="lg:w-[75%] w-[100%] h-56" >
                         <Image
@@ -68,7 +68,7 @@ const About = () => {
                         <h1 className=" lg:text-[48px] text-3xl font-semibold  lg:leading-[58px] lg:w-[90%]  ">
                             Read Something About Doctio Health Care
                         </h1>
-                        
+
                         <Image
                             src="https://demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/line-1.png"
                             alt="line"
@@ -77,21 +77,21 @@ const About = () => {
 
                             className="lg:w-[25%] w-[40%] lg:mt-5 mt-2 mx-auto"
                         />
-                        
+
                         <p className="lg:w-[80%] text-justify my-5 text-[16px] p-2 font-light"> Sed ut pers piciatis unde omnis iste natus error sit volu ptatem accus antium one dolor emque laudan tium, totam rem aperiam, eaque ipsa quae ab illo invetore off veritatis et quasi and visit our service page architecto beatae vitae dicta suntpli. Nemoe ipsam volup and tate quia voluptas sit aspernatur aut odit aut fugit, sedon quia cquuntur magni dolores eos qui ratione.</p>
-                        <div className="flex gap-5 p-2"> 
+                        <div className="flex gap-5 p-2">
                             <Button
-                            
-                            className="w-[200px] rounded-full bg-primaryown hover:bg-secondary-100 lg:mt-5 mt-2"
-                            > Read More</Button> 
+
+                                className="w-[200px] rounded-full bg-primaryown hover:bg-secondary-100 lg:mt-5 mt-2"
+                            > Read More</Button>
                             {/* call with icons */}
-                            <Button 
-                            className="w-[200px] rounded-full bg-transparent  text-black  text-[20px]
+                            <Button
+                                className="w-[200px] rounded-full bg-transparent  text-black  text-[20px]
                                 hover:bg-transparent hover:text-secondary-100
                             lg:mt-5 mt-2"
-                            > <PhoneCall size={30} /> 
-                            +123 456 7890
-                            
+                            > <PhoneCall size={30} />
+                                +123 456 7890
+
                             </Button>
                         </div>
                     </div>

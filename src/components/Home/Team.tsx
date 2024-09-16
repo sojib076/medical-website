@@ -11,7 +11,7 @@ import Image from "next/image";
 const Team = () => {
     return (
         <>
-             <div className="bg-[#f5f5f5]">
+             <div className="bg-[#f5f5f5] pb-10 mt-24  md:mt-52">
             <div className=" mx-auto">
                 <div className="flex flex-col items-center lg:mt-20 lg:py-0 py-10">
                 <h1 className="lg:text-[150px] 
@@ -35,7 +35,7 @@ const Team = () => {
                             className="lg:w-[15%] w-[20%] lg:my-8 mt-2 mx-auto"
                         />
                 </div>
-                <Carousel className="lg:w-[80%] w-[70%] mx-auto">
+                <Carousel className="lg:w-[80%] w-[75%] mx-auto md:mt-20">
                     <CarouselContent>
                         {Array.from({ length: 5 }).map((_, index) => (
                             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3  ">
