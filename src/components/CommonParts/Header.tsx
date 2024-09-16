@@ -1,4 +1,5 @@
 import { Clock, Phone, X } from "lucide-react";
+import Link from "next/link";
 import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 
@@ -72,7 +73,7 @@ const Header = () => {
                         
                         <ul className="flex gap-10 items-center text-[15px] font-medium">
                             <li>Home</li>
-                            <li>About</li>
+                          <Link href="/about"> <li>About</li> </Link>
                             <li>Services</li>
                             <li>Blog</li>
                             <li>Contact</li>

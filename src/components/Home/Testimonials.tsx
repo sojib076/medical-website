@@ -9,20 +9,20 @@ import {
 
 const Testimonials = () => {
     return (
-        <div className="lg:w-[78%] w-[80%] mx-auto md:mt-20 my-36">
-           <div className="mb-10"> 
-           <h1 className="text-sm  text-green-500 mb-2 w-[50%] font-bold"> 
+        <div className="lg:w-[78%] w-[90%] mx-auto md:mt-20 lg:my-36 my-20">
+           <div className="mb-16 md:mb-10"> 
+           <h1 className="text-sm  text-primaryown mb-2 w-[50%] font-bold"> 
               Testimonials
             </h1>
-           <h1 className="lg:text-5xl text-3xl lg:w-[50%] font-bold"> 
+           <h1 className="lg:text-5xl text-3xl lg:w-[50%] font-bold md:mb-0 "> 
      What Our Patient Say About Our Caring
             </h1>
 
            </div>
-            <Carousel className="" autoScrollInterval={2000} >
-                <CarouselContent>
+            <Carousel  autoScrollInterval={2000} >
+                <CarouselContent   >
                     {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-[60%] py-10  px-5 
+                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-[70%] py-10  px-5 
                     
                         ">
                             <div className=" bg-white shadow-lg rounded-lg grid lg:grid-cols-3 items-center p-5    hover:scale-110  
@@ -72,10 +72,15 @@ const Testimonials = () => {
                     ))}
                 </CarouselContent >
                 <CarouselPrevious 
-                    className="bg-primaryown w-14 h-14 rounded-full text-white"
+                    className="bg-primaryown w-14 h-14 rounded-full text-white 
+                    md:absolute md:top-0 md:left-[85%]
+                    absolute top-[-2%] left-[8%]"
                 />
                 <CarouselNext  
-                className="bg-primaryown w-14 h-14 rounded-full text-white"
+                className="bg-primaryown w-14 h-14 rounded-full text-white
+                md:flex md:top-0 md:right-0
+                absolute top-[-2%] right-[8%]
+                "
                 />
             </Carousel>
         </div>
