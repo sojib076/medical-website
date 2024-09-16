@@ -1,9 +1,6 @@
 "use client"
-
 import * as React from "react"
-import useEmblaCarousel, {
-  type UseEmblaCarouselType,
-} from "embla-carousel-react"
+import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -19,6 +16,7 @@ type CarouselProps = {
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
+  autoScrollInterval?: number // Add this prop to control the auto-scroll interval
 }
 
 type CarouselContextProps = {
@@ -54,6 +52,7 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
+      autoScrollInterval,
       ...props
     },
     ref
@@ -62,11 +61,13 @@ const Carousel = React.forwardRef<
       {
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
+        loop: true,
       },
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
+    const [isHovering, setIsHovering] = React.useState(false)
 
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
@@ -120,6 +121,20 @@ const Carousel = React.forwardRef<
       }
     }, [api, onSelect])
 
+    React.useEffect(() => {
+      if (!api || !autoScrollInterval || autoScrollInterval <= 0) {
+        return
+      }
+
+      const interval = setInterval(() => {
+        if (!isHovering) {
+          api?.scrollNext()
+        }
+      }, autoScrollInterval)
+
+      return () => clearInterval(interval)
+    }, [api, autoScrollInterval, isHovering])
+
     return (
       <CarouselContext.Provider
         value={{
@@ -141,6 +156,8 @@ const Carousel = React.forwardRef<
           role="region"
           aria-roledescription="carousel"
           {...props}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
         >
           {children}
         </div>
@@ -206,17 +223,18 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-14 w-14 rounded-full bg-[#E12354] outline-none hover:bg-slate-400 ",
+        "absolute  h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
+          ? "-left-12 top-1/2 -translate-y-1/2 hover:scale-90 "
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+        canScrollPrev ? "flex" : "hidden",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="h-8 w-8" />
+      <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -235,17 +253,18 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-14 w-14 rounded-full bg-[#E12354] outline-none hover:bg-slate-400 p- ",
+        "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-right-12 top-1/2 -translate-y-1/2 hover:scale-90 "
+          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90 hover:scale-90",
+        canScrollNext ? "flex" : "hidden",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="h-8 w-8" />
+      <ArrowRight className="h-4 w-4  " />
       <span className="sr-only">Next slide</span>
     </Button>
   )

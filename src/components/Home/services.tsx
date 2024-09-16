@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Services = () => {
     return (
-        <div className="mt-24 w-full md:mt-52 ">
+        <div className="mt-24  md:mt-52  md:mb-0 mb-96 lg:mb-0  ">
 
             <div className="z-10 relative">
                 <div
@@ -20,7 +20,7 @@ const Services = () => {
 
                 </div>
 
-                <div className="relative z-10 lg:w-[80%] mx-auto   ">
+                <div className="relative w-[100%] z-10 lg:w-[80%] mx-auto   ">
                     <h6 className="font-medium text-[20px] text-primary text-center ">
                         Our Services
                     </h6>
