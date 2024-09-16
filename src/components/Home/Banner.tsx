@@ -8,10 +8,7 @@ import {
 
 import { Button } from "../ui/button";
 
-// ..
-
 const Banner = () => {
-
     return (
 
         <>

@@ -4,6 +4,7 @@ import Banner from "@/components/Home/Banner";
 import OurServices from "@/components/Home/OurServices";
 import Services from "@/components/Home/services";
 import Team from "@/components/Home/Team";
+import Testimonials from "@/components/Home/Testimonials";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
     <OurServices/>
     <Team/>
     <Appointment/>
+    <Testimonials/>
    </div>
   );
 }

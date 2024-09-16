@@ -4,8 +4,8 @@ import { Button } from '../ui/button';
 
 const StatsAndAppointment = () => {
     return (
-       <div className='bg-gray-800 py-5'> 
-         <div className=" lg:mt-36  grid lg:grid-cols-2 grid-cols-1 gap-10 lg:w-[70%] lg:p-0 p-5 mx-auto  ">
+       <div className='bg-gray-800 py-10 lg:py-20'> 
+         <div className="  grid lg:grid-cols-2 grid-cols-1 gap-10 lg:w-[70%] lg:p-0 p-5 mx-auto  ">
             {/* Stats Section */}
             <div className="grid grid-cols-2">
                 
