@@ -1,3 +1,4 @@
+import Contactus from "@/components/About/Contact";
 import About from "@/components/Home/About";
 import Appointment from "@/components/Home/Appointment";
 import Banner from "@/components/Home/Banner";
@@ -17,6 +18,7 @@ export default function Home() {
     <Team/>
     <Appointment/>
     <Testimonials/>
+    <Contactus/>
    </div>
   );
 }

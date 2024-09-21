@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div>
 
-      <div className="lg:h-[380px] "
+      <div className="lg:h-[380px] py-20 "
         style={
           {
             backgroundImage: `url('https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/banner.jpg')`,

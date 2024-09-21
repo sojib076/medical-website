@@ -58,7 +58,7 @@ const FAQSection: React.FC = () => {
                 </p>
             </div>
 
-            {/* read more h1  */}
+        
 
 
 
@@ -78,7 +78,9 @@ const FAQSection: React.FC = () => {
                             </span>
                         </button>
                         <div
-                            ref={(el) => (answerRefs.current[index] = el)}
+                            ref={(el) => {
+                                answerRefs.current[index] = el;
+                            }}
                             className="overflow-hidden transition-all duration-300"
                             style={{ height: openIndex === index ? "auto" : "0px" }}
                         >
