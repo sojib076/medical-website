@@ -1,3 +1,6 @@
+import Contactus from "@/components/About/Contact";
+import FAQSection from "@/components/About/FAQ";
+import Services from "@/components/Home/services";
 import { Button } from "@/components/ui/button";
 import { PhoneCall } from "lucide-react";
 import Image from "next/image";
@@ -7,7 +10,7 @@ const page = () => {
   return (
     <div>
 
-      <div className="h-[380px] "
+      <div className="lg:h-[380px] "
         style={
           {
             backgroundImage: `url('https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/banner.jpg')`,
@@ -19,7 +22,7 @@ const page = () => {
         }
       >
 
-        <div className="flex items-center justify-center h-[380px]   text-center text-white">
+        <div className="flex items-center justify-center lg:h-[380px] lg:py-14  text-center text-white">
           <div>
             <h1 className="font-bold text-4xl">
               About Us
@@ -34,7 +37,7 @@ const page = () => {
       </div>
 
       {/* about the company  */}
-      <div className="grid lg:grid-cols-2 grid-cols-1   lg:gap-10 mt-0 md:mt-20 lg:mt-10 w-[90%] mx-auto items-center ">
+      <div className="grid lg:grid-cols-2 grid-cols-1   lg:gap-10 mt-0 md:mt-20 lg:mt-10 w-[90%] mx-auto items-center h-full  lg:py-0 pb-40 ">
              
 
                 <div>
@@ -92,7 +95,7 @@ const page = () => {
 
                 </div>
 
-                <div className="relative">
+                <div className="relative top-5">
                     <Image
                         src="https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/caption-img-1.jpg"
                         alt="about"
@@ -113,18 +116,29 @@ const page = () => {
 
                     </div>
 
+        
                     <Image
                         src="https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/caption-img-2.jpg "
                         alt="about"
 
                         width={1000}
                         height={500}
-                        className=" w-[50%] left-[30%] lg:top-[50%] top-[80%] absolute z-0"
+                        className=" w-[50%] lg:left-[30%] lg:top-[50%]   absolute top-[77%]  left-[40%]    "
                     />
-
                     </div>
+
+
+
+               
                
             </div>
+
+            <div className=""> 
+            <Services />
+            </div>
+
+          <FAQSection />
+          <Contactus />
 
     </div>
   );

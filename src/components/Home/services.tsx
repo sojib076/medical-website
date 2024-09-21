@@ -3,15 +3,13 @@ import Image from "next/image";
 
 const Services = () => {
     return (
-        <div className="mt-24  md:mt-52  md:mb-0 mb-96 lg:mb-0  ">
+        <div className="  ">
 
-            <div className="z-10 relative">
+            <div className="z-10 relative top-[-50px]">
                 <div
-
-
-                    className="absolute inset-0 top-[-80px]  z-0">
+                    className=" relative inset-0  top-[100px]  ">
                     <h1
-                        className="lg:text-[150px] text-[78px]  font-bold text-green-900/30
+                        className="lg:text-[150px] text-[78px]   font-bold text-green-900/30
                         
                         opacity-50   text-center
 ">
@@ -29,11 +27,11 @@ const Services = () => {
                     </h1>
 
 
-                    <div className="grid lg:grid-cols-3 gap-4 lg:mt-5 items-center  h-[400px]">
+                    <div className="grid lg:grid-cols-3 gap-4 lg:mt-5 items-cente lg:h-[400px]  ">
                         {
                             // fake map function
                             [1, 2, 3].map((item, index) => (
-                                <div className="p-5 w-full  z-0">
+                                <div className="p-5 w-full  z-0 ">
                                     <Image
                                         src="https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/service-1.jpg"
                                         alt="service"
