@@ -4,6 +4,12 @@ import { Button } from '../ui/button';
 
 const StatsAndAppointment = () => {
     return (
+<>
+<div className="mt-20 py-5 bg-primaryown  text-center text-[18px] font-medium text-white  ">
+                        <h1>
+                        Ready to get our medical care? We’re always wait for serve you, <span className="underline">Make an Appointment.</span>
+                        </h1>
+        </div>
        <div className='bg-gray-800 py-10 lg:py-20'> 
          <div className="  grid lg:grid-cols-2 grid-cols-1 gap-10 lg:w-[70%] lg:p-0 p-5 mx-auto  ">
             {/* Stats Section */}
@@ -61,6 +67,7 @@ const StatsAndAppointment = () => {
 
         </div>
        </div>
+       </>
     );
 };
 

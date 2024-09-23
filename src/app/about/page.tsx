@@ -1,40 +1,22 @@
 import Contactus from "@/components/About/Contact";
 import FAQSection from "@/components/About/FAQ";
+import { DynamicBanner } from "@/components/CommonParts/DynamicBanner";
 import Services from "@/components/Home/services";
 import { Button } from "@/components/ui/button";
 import { PhoneCall } from "lucide-react";
 import Image from "next/image";
 
 
+
+
 const page = () => {
   return (
     <div>
 
-      <div className="lg:h-[380px] py-20 "
-        style={
-          {
-            backgroundImage: `url('https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/banner.jpg')`,
-            backgroundSize: 'cover',
-
-
-          }
-
-        }
-      >
-
-        <div className="flex items-center justify-center lg:h-[380px] lg:py-14  text-center text-white">
-          <div>
-            <h1 className="font-bold text-4xl">
-              About Us
-            </h1>
-            <p>
-              Doctio// <span className="text-secondary-100 font-medium">About Us</span>
-            </p>
-          </div>
-        </div>
-
-
-      </div>
+<DynamicBanner
+      title="About Us"
+      subText="Home"
+      highlightText="About Us"/>
 
       {/* about the company  */}
       <div className="grid lg:grid-cols-2 grid-cols-1   lg:gap-10 mt-0 md:mt-20 lg:mt-10 w-[90%] mx-auto items-center h-full  lg:py-0 pb-40 ">
@@ -59,10 +41,10 @@ const page = () => {
                     <div />
                     <div className="relative lg:mt-[-90px] mt-[-50px] bg-[#ffffffcb] lg:text-left text-center ">
                         <h1 className="text-primary font-semibold ">
-                            About Doctio
+                            About Us
                         </h1>
                         <h1 className=" lg:text-[48px] text-3xl font-semibold  lg:leading-[58px] lg:w-[90%]  ">
-                            Read Something About Doctio Health Care
+                            Read Something About US Health Care
                         </h1>
 
                         <Image

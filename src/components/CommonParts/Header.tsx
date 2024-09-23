@@ -10,6 +10,31 @@ import { useState } from "react";
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+const [currentRoute, setCurrentRoute] = useState('Home')
+
+  
+
+
+  const Routes = [{
+    name: 'Home',
+    path: '/'
+  },
+  {
+    name: 'About',
+    path: '/about'
+  },{
+    name: 'Services',
+
+
+  
+    path: '/services'
+  },
+  {
+    name: 'Contact',
+    path: '/contact'
+  }
+]
+
   return (
     <div>
       {/* Desktop Header */}
@@ -46,15 +71,28 @@ const Header = () => {
         <div>
           <h1 className="text-2xl font-bold text-primary-100">Logo</h1>
         </div>
-        <ul className="flex gap-10 items-center text-[15px] font-medium">
-          <li>Home</li>
-          <Link href="/about">
-            <li>About</li>
-          </Link>
-          <li>Services</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
+        
+        <div className="flex gap-10 items-center text-[15px] font-medium">
+            {Routes.map((route, index) => (
+                <Link href={route.path} key={index}>
+                   <h1
+          
+            className={`cursor-pointer relative group transition-all hover:text-primary-100`}
+          >
+            {route.name}
+            <span
+              className={`absolute bottom-0 left-0 h-[2px] w-0 bg-primaryown group-hover:w-full group-hover:transition-all`}
+              style={{
+                transitionDuration: '0.5s',
+               
+              }}
+            ></span>
+          </h1>
+                </Link>
+            ))}
+        
+        </div>
+
         <button className="bg-primaryown px-14 py-3 font-medium rounded-full text-white hover:scale-90 transition-all">
           Contact us
         </button>
@@ -99,15 +137,15 @@ const Header = () => {
           </button>
         </div>
 
-        <ul className="flex flex-col gap-4 px-4 items-start text-[15px] font-medium">
-          <li>Home</li>
-          <Link href="/about">
-            <li>About</li>
-          </Link>
-          <li>Services</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
+        <div className="flex flex-col gap-4 px-4 items-start text-[15px] font-medium">
+            {Routes.map((route, index) => (
+                <Link href={route.path} key={index}>
+                <h1 className="cursor-pointer hover:text-primary-100 transition-all">
+                    {route.name}
+                </h1>
+                </Link>
+            ))}
+        </div>
         <button className="bg-primaryown mt-4 px-6 py-2 font-medium rounded-full text-white hover:scale-90 transition-all">
           Contact us
         </button>

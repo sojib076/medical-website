@@ -92,11 +92,7 @@ const Team = () => {
 
             </div>
         </div>
-        <div className="mt-20 py-5 bg-primaryown  text-center text-[18px] font-medium text-white  ">
-                        <h1>
-                        Ready to get our medical care? We’re always wait for serve you, <span className="underline">Make an Appointment.</span>
-                        </h1>
-        </div>
+     
         </>
     )
 }

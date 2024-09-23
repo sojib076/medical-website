@@ -1,4 +1,4 @@
-import { PlaneIcon } from "lucide-react";
+import { Play } from "lucide-react";
 
 export default function Contactus() {
     return (
@@ -41,8 +41,8 @@ export default function Contactus() {
     
           <div className="flex justify-center mt-8">
           <button className="relative w-16 h-16 rounded-full bg-[#E12354] text-white flex items-center justify-center shadow-lg hover:bg-pink-600 transition-all duration-300 ease-in-out transform hover:scale-105">
-            <PlaneIcon size={32} />
-            <span className="absolute w-full h-full rounded-full bg-[#E12354] opacity-75 animate-ping"></span>
+            <Play size={32} />
+            <span className="absolute w-full h-full rounded-full bg-[#E12354] opacity-90 animate-ping"></span>
           </button>
           </div>
         </div>

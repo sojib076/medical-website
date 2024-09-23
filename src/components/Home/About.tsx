@@ -5,7 +5,7 @@ import { PhoneCall } from "lucide-react";
 const About = () => {
     return (
         <div>
-            <div className="grid lg:grid-cols-2 grid-cols-1   lg:gap-10 mt-0 md:mt-52 ">
+            <div className="grid lg:grid-cols-2 grid-cols-1   lg:gap-10 ">
                 <div className="grid grid-cols-2 lg:gap-5 relative lg:p-10 p-5 z-20  md:mt-0 " >
                     <div className="lg:w-[75%] w-[100%] h-56" >
                         <Image
