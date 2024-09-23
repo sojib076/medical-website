@@ -5,70 +5,71 @@ import { useEffect, useState } from 'react';
 const ServicesMore = () => {
     const services = [
         {
-            "id": 1,
-            "title": "Neuro Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Neurology",
-            "image": "/images/neuro.jpg",
-            "icon": "🧠"
+          "id": 1,
+          "title": "Neuro Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Neurology",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "🧠"
         },
         {
-            "id": 2,
-            "title": "Dental Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Dental Care",
-            "image": "/images/dental.jpg",
-            "icon": "🦷"
+          "id": 2,
+          "title": "Dental Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Dental Care",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "🦷"
         },
         {
-            "id": 3,
-            "title": "Eye Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Eye Care",
-            "image": "/images/eye.jpg",
-            "icon": "👁️"
+          "id": 3,
+          "title": "Eye Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Eye Care",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "👁️"
         },
         {
-            "id": 4,
-            "title": "Plastic Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Skin Care",
-            "image": "/images/plastic.jpg",
-            "icon": "💉"
+          "id": 4,
+          "title": "Plastic Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Skin Care",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "💉"
         },
         {
-            "id": 1,
-            "title": "Neuro Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Neurology",
-            "image": "/images/neuro.jpg",
-            "icon": "🧠"
+          "id": 5,
+          "title": "Neuro Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Neurology",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "🧠"
         },
         {
-            "id": 2,
-            "title": "Dental Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Dental Care",
-            "image": "/images/dental.jpg",
-            "icon": "🦷"
+          "id": 6,
+          "title": "Dental Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Dental Care",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "🦷"
         },
         {
-            "id": 3,
-            "title": "Eye Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Eye Care",
-            "image": "/images/eye.jpg",
-            "icon": "👁️"
+          "id": 7,
+          "title": "Eye Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Eye Care",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "👁️"
         },
         {
-            "id": 4,
-            "title": "Plastic Surgery",
-            "description": "Best Medical & Health Care",
-            "category": "Skin Care",
-            "image": "/images/plastic.jpg",
-            "icon": "💉"
+          "id": 8,
+          "title": "Plastic Surgery",
+          "description": "Best Medical & Health Care",
+          "category": "Skin Care",
+          "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+          "icon": "💉"
         }
-    ]
+      ];
+      
 
 
     return (
@@ -89,14 +90,18 @@ const ServicesMore = () => {
                        Our Services
                     </h1>
                 <h2 className="text-4xl font-bold mb-6">Services We Provide</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:py-10 gap-5 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:py-10 gap-5 gap-y-14  ">
                     {services.map((service) => (
 
 
 
-                        <div className="bg-white  w-[90%] mx-auto rounded-lg shadow-md overflow-hidden relative hover:shadow-xl transition-shadow duration-300">
+                        <div className="bg-white   w-[90%] mx-auto rounded-lg shadow-md overflow-hidden relative hover:shadow-xl 
+                         hover:translate-y-[-20px] cursor-pointer  transition-all 
+
+
+                          duration-300">
                             {/* Image Section */}
-                            <div className="relative">
+                            <div className="">
 
 
                                 <Image
@@ -106,8 +111,9 @@ const ServicesMore = () => {
                                     height={250}
                                     className="w-full h-auto object-cover"
                                 />
+                                
                                 {/* Icon Overlay */}
-                                <div className="absolute top-4 right-4 bg-red-500 text-white w-12 h-12 flex items-center justify-center rounded-full">
+                                <div className="absolute top-[40%] right-1 bg-red-500 text-white w-12 h-12 flex items-center justify-center rounded-full">
                                     <span className="text-xl">{service.icon}</span>
                                 </div>
                             </div>

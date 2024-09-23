@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/carousel"
 
 import { Button } from "../ui/button";
+import DynamicButton from "../CommonParts/DynamicButton";
 
 const Banner = () => {
     return (
@@ -37,7 +38,7 @@ const Banner = () => {
                                 </div>
 
                                 <div className="z-10 relative lg:mt-[-20%]
-                                 mt-[-20%] md:mt-[-10%] lg:p-0  ">
+                                 mt-[-20%] md:mt-[-10%] lg:p-0   ">
                                     <h6 className="font-medium lg:text-[20px]text-[15px] lg:bg-transparent text-center bg-[#ffffffd3]">
                                         Welcome to health care
                                     </h6>
@@ -45,17 +46,18 @@ const Banner = () => {
                                     <h1 className="lg:text-[85px] text-6xl font-medium lg:leading-[90px] md:w-[70%] lg:p-0 p-5 ">
                                         Medical &  Health Care Solutions.
                                     </h1>
-                                    <Button
+                                    <div className="lg:ml-0 ml-8">
+                                        <DynamicButton
+                                            buttonText="Get Started"
                                         
-                                      className="bg-[#E12354] text-white rounded-full px-14 py-7  hover:bg-secondary-100 lg:mt-10 mt-5  ml-5 lg:ml-0 "
-                                    >
-                                        Get Started
-
-
-
-
+                                            textColor="white"
+                                            px="px-8"
+                                            py="py-4"
+                                      
+                                          
                                         
-                                    </Button>
+                                        />
+                                        </div>
                                 </div>
                             </div>
                             <div>

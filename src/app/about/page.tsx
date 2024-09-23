@@ -4,12 +4,20 @@ import { DynamicBanner } from "@/components/CommonParts/DynamicBanner";
 import Services from "@/components/Home/services";
 import { Button } from "@/components/ui/button";
 import { PhoneCall } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 
 
 
-
+export const metadata = {
+    title: "About Us",
+    description: "About Us - Next.js Tailwind CSS",
+  };
+  
 const page = () => {
+   
+
+      
   return (
     <div>
 
@@ -127,3 +135,5 @@ const page = () => {
 };
 
 export default page;
+
+

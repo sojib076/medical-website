@@ -22,10 +22,10 @@ const Testimonials = () => {
             <Carousel  autoScrollInterval={2000} >
                 <CarouselContent   >
                     {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-[70%] py-10  px-5 
+                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-[70%] py-10  mt-5
                     
                         ">
-                            <div className=" bg-white shadow-lg rounded-lg grid lg:grid-cols-3 items-center p-5    hover:scale-110  
+                            <div className=" bg-gray-300 shadow-lg rounded-2xl grid lg:grid-cols-3 items-center p-10 cursor-pointer     hover:translate-y-[-50px]
                             transition duration-300 ease-in-out transform
                             ">
                                 <div className="
@@ -48,7 +48,7 @@ const Testimonials = () => {
                                 <h1 className="text-green-500 font-bold text-center"> 
                                     SoftechLimited
                                 </h1>
-                                <p className="text-gray-600 mb-4 text-sm  text-justify">
+                                <p className="text-gray-600 mb-4 text-sm  text-justify mt-2">
                                     Lorem ipsum is a dolor sitae amet consectetur of and the voluptata
                                     laboriosam and then null on the often delenitie reiciendis as
                                     voluptatibus and the laboriosam on and nulla deleniti and many lore

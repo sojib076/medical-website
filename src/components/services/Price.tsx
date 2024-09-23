@@ -1,5 +1,5 @@
 import { Check, X } from 'lucide-react';
-import PricingCard from '../components/PricingCard';
+
 
 const plans = [
   {
@@ -67,7 +67,7 @@ const Pricing = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-0 gap-6 lg:px-20 px-10 lg:mt-[7%] relative z-10">
           {plans.map((plan) => (
        <div className={`bg-white rounded-lg shadow-md p-6 mx-auto lg:w-[80%] transition-all duration-300 ${
-        plan.middle ? "lg:h-[500px] lg:shadow-2xl lg:shadow-red-400 lg:mt-[-10%] " : "lg:h-[450px]"
+        plan.middle ? "lg:h-[500px] lg:shadow-2xl hover:lg:shadow-green-200 lg:mt-[-10%]  hover:translate-y-[-20px] " : "lg:h-[450px]"
       }`}>
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-gray-700">{plan.planName}</h3>

@@ -3,8 +3,7 @@ import { Play } from "lucide-react";
 export default function Contactus() {
     return (
       <div
-        className="relative bg-cover bg-center "
-        style={{
+        className="relative bg-cover bg-center  py-10"       style={{
           backgroundImage: `url('https://i0.wp.com/demo.themedraft.net/wp/doctio/wp-content/uploads/2022/06/section-bg2.jpg')`,
         }}
       >

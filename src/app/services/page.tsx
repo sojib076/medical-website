@@ -5,6 +5,13 @@ import ServicesMore from "@/components/services/ServicesMore";
 import ServicesSection from "@/components/services/ServicesSection";
 
 
+export const metadata = {
+    title: "Services",
+    description: " Services - Next.js Tailwind CSS",
+  };
+  
+
+
 const Services = () => {
     return (
         <div>
